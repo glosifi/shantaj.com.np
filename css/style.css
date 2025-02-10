@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sassy+Frass&family=Shippori+Mincho&family=WindSong:wght@400;500&family=Yanone+Kaffeesatz:wght@200..700&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #512729;
+  font-family: "Frank Ruhl", serif;
+}
+
+p {
+  font-family: "Shippori Mincho", serif;
+}
+span {
+  font-family: "Shippori Mincho", serif;
+}
+a {
+  font-family: "Shippori Mincho", serif;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #f0dfd5 0%, #ffffff 100%);
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+
+.btn-primary {
+  background-color: #ff835a;
+}
+
+.btn-secondary {
+  background-color: #512729;
+  border-top-right-radius: 20px;
+  color: white;
+}
+
+.bg-custom {
+  background-color: #fcf3ee;
+}
+
+.bg-custom-light-pink {
+  background-color: #ffefd7;
+}
+.bg-custom-pink {
+  background-color: #fee0d9;
+}
+
+.bg-brown {
+  background-color: #512729;
+}
+
+.custom-txt-color {
+  color: #ff835a;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white !important;
+  border-radius: 100%;
+  padding: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 10; /* Make sure they appear on top of the slides */
+  font-size: 20px !important;
+  --swiper-navigation-size: 20px !important;
+}
+
+.swiper-button-prev {
+  left: 10px; /* Adjust as needed */
+}
+
+.swiper-button-next {
+  right: 10px; /* Adjust as needed */
+}
+
+/* Ensure non-active slides have normal size */
+.swiper-slide {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}

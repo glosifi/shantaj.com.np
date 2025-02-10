@@ -1,0 +1,111 @@
+h1 {
+  font-size: 60px !important;
+}
+h2 {
+  font-size: 50px !important;
+}
+h3 {
+  font-size: 40px !important;
+}
+h4 {
+  font-size: 30px !important;
+}
+h5 {
+  font-size: 25px !important;
+}
+h6 {
+  font-size: 20px !important;
+}
+
+.small {
+  font-size: 14px !important;
+}
+
+p {
+  font-size: 16px;
+}
+
+.small {
+  font-size: 12px;
+}
+/* Media queries with !important applied */
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 50px !important;
+  }
+  h2 {
+    font-size: 45px !important;
+  }
+  h3 {
+    font-size: 35px !important;
+  }
+  h4 {
+    font-size: 28px !important;
+  }
+  h5 {
+    font-size: 23px !important;
+  }
+  h6 {
+    font-size: 18px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px !important;
+  }
+  h2 {
+    font-size: 35px !important;
+  }
+  h3 {
+    font-size: 30px !important;
+  }
+  h4 {
+    font-size: 24px !important;
+  }
+  h5 {
+    font-size: 20px !important;
+  }
+  h6 {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 30px !important;
+  }
+  h2 {
+    font-size: 28px !important;
+  }
+  h3 {
+    font-size: 24px !important;
+  }
+  h4 {
+    font-size: 20px !important;
+  }
+  h5 {
+    font-size: 18px !important;
+  }
+  h6 {
+    font-size: 16px !important;
+  }
+}
+
+.section-p {
+  padding: 80px 0;
+}
+
+.section-hero {
+  padding: 75px 0 0px 0;
+}
+
+@media (max-width: 768px) {
+  .section-p {
+    padding: 40px 0;
+  }
+
+  .section-hero {
+    padding: 90px 0 0px 0;
+  }
+}
