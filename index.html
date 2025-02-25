@@ -22,6 +22,7 @@
     />
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <header class="site-header fixed z-50 w-full gradient">
@@ -105,70 +106,111 @@
     </header>
 
     <main>
-      <!--Hero Section-->
-      <section class="section-hero bg-custom">
+      <!-- Hero Section -->
+      <section class="py-[75px] bg-[#fcf3ee]">
         <div class="container mx-auto px-6">
           <div class="flex md:flex-row flex-col items-center gap-10">
             <div class="md:w-1/3 w-full">
-              <h1 class="leading-none">Glow naturally with skinn care</h1>
-              <p>
+              <h1
+                class="leading-none text-[32px] md:text-[65px] font-medium text-[#34251F]"
+              >
+                Glow naturally with skinn care
+              </h1>
+              <p class="mt-4 text-[16px] md:text-[18px] text-[#5a524e]">
                 Our skincare line is crafted with pure, high-quality ingredients
                 for visible results.
               </p>
-              <button class="flex items-center gap-2 btn btn-primary">
-                <img src="assets/tele.png" />
-                <p class="font-medium">Book an appointment</p>
+              <button class="flex items-center gap-2 btn btn-primary mt-6">
+                <img
+                  src="assets/tele.png"
+                  alt="Book an appointment"
+                  class="w-5 h-5"
+                />
+                <p class="font-medium text-[16px]">Book an appointment</p>
               </button>
             </div>
             <div class="md:w-2/3 w-full">
-              <img src="assets/hero-section.png" alt="hero-section" />
+              <img
+                src="assets/hero-section.png"
+                alt="hero-section"
+                class="w-full h-auto"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section-p">
+      <section class="md:py-[80px] py-[40px]">
         <div class="container mx-auto px-6">
-          <div class="text-center mb-10 md:mb-16">
-            <img src="assets/sparkle-4.png" class="w-14 h-auto mx-auto" />
-            <h2>The ultimate guide to radiant beauty</h2>
-            <p class="md:w-1/2 w-full mx-auto">
+          <!-- Heading and Intro Text -->
+          <div class="text-center mb-10 md:mb-16 justify-center items-center">
+            <img
+              src="assets/sparkle-4.png"
+              class="w-14 h-auto mx-auto"
+              alt="sparkle"
+            />
+            <h2 class="text-[30px] md:text-[36px] font-bold text-[#34251F]">
+              The ultimate guide to radiant beauty
+            </h2>
+            <p
+              class="md:w-1/2 w-full mx-auto mt-4 text-[#5a524e] text-[16px] md:text-[18px]"
+            >
               At Skinn Care, we believe that healthy skin starts with pure,
-              effective ingredients. Our journey began with a simple mission
+              effective ingredients. Our journey began with a simple mission.
             </p>
-            <button class="btn btn-secondary">
+            <button
+              class="px-[20px] py-[10px] mt-6 bg-[#512729] text-white rounded-tr-[20px] flex items-center justify-center gap-2 mx-auto"
+            >
               Learn more
               <i class="fa-solid fa-chevron-right" style="font-size: 12px"></i>
             </button>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10">
+
+          <!-- Three Feature Boxes -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10"
+          >
+            <!-- Feature 1: Clean Ingredients -->
             <div
-              class="flex flex-col items-center text-center bg-custom-pink py-10 md:py-14 rounded-3xl px-10"
+              class="flex flex-col items-center text-center bg-[#fee0d9] py-10 md:py-14 rounded-3xl px-10"
             >
               <img src="assets/vials.png" alt="vials" class="mb-4" />
-              <h6 class="font-semibold mb-2">Clean ingredients</h6>
-              <p>
+              <h6 class="font-semibold mb-2 text-[20px] text-[#34251F]">
+                Clean ingredients
+              </h6>
+              <p class="text-[16px] text-[#5a524e]">
                 We prioritize high-quality, natural ingredients that are safe
                 and effective for your skin.
               </p>
             </div>
+
+            <!-- Feature 2: Sustainable Beauty -->
             <div
-              class="flex flex-col items-center text-center bg-custom-light-pink py-10 md:py-14 rounded-3xl px-10"
+              class="flex flex-col items-center text-center bg-[#ffefd7] py-10 md:py-14 rounded-3xl px-10"
             >
-              <img src="assets/eye-dropper.png" alt="vials" class="mb-4" />
-              <h6 class="font-semibold mb-2">Sustainable beauty</h6>
-              <p>
+              <img
+                src="assets/eye-dropper.png"
+                alt="eye dropper"
+                class="mb-4"
+              />
+              <h6 class="font-semibold mb-2 text-[20px] text-[#34251F]">
+                Sustainable beauty
+              </h6>
+              <p class="text-[16px] text-[#5a524e]">
                 Our eco-conscious approach ensures that our products are kind to
                 the environment and your skin.
               </p>
             </div>
 
+            <!-- Feature 3: Dermatologist Approved -->
             <div
-              class="flex flex-col items-center text-center bg-custom py-10 md:py-12 rounded-3xl px-10"
+              class="flex flex-col items-center text-center bg-[#fcf3ee] py-10 md:py-12 rounded-3xl px-10"
             >
-              <img src="assets/shield-check.png" alt="vials" class="mb-4" />
-              <h6 class="font-semibold mb-2">Dermatologist-approved</h6>
-              <p>
+              <img src="assets/shield-check.png" alt="shield" class="mb-4" />
+              <h6 class="font-semibold mb-2 text-[20px] text-[#34251F]">
+                Dermatologist-approved
+              </h6>
+              <p class="text-[16px] text-[#5a524e]">
                 Each formula is rigorously tested for purity and efficacy, so
                 you can trust what goes on your skin.
               </p>
@@ -177,19 +219,21 @@
         </div>
       </section>
 
-      <section class="section-p bg-brown py-16">
+      <section class="md:py-[80px] py-[40px] bg-[#512729] py-16">
         <div class="container mx-auto px-6">
           <div
-            class="section-heading flex flex-col lg:flex-row items-center justify-between custom-txt-color gap-0 lg:gap-20 md:gap-4 mb-10"
+            class="section-heading flex flex-col lg:flex-row items-center justify-between text-[#ff835a] gap-0 lg:gap-20 md:gap-4 mb-10"
           >
             <div class="md:flex md:flex-row sm:flex-col">
               <div class="md:w-1/3 text-center md:text-left">
-                <h3 class="font-semibold leading-none custom-txt-color mb-4">
+                <h3
+                  class="font-semibold leading-none text-[#ff835a] mb-4 text-[30px] md:text-[42px]"
+                >
                   Our Skincare Services
                 </h3>
               </div>
               <div class="md:w-2/3 text-center md:text-left">
-                <p class="leading-relaxed mb-4">
+                <p class="leading-relaxed mb-4 text-sm md:text-base">
                   Whether you're new to skincare or a seasoned pro, our services
                   are here to help you achieve your healthiest skin. Explore our
                   tailored offerings below.
@@ -199,7 +243,7 @@
 
             <div class="md:w-1/3 text-center md:text-right">
               <button
-                class="btn bg-white border-2 py-3 text-black font-semibold flex items-center justify-center hover:bg-gray-200 transition rounded-tr-3xl"
+                class="btn bg-white border-2 py-3 text-black font-semibold flex items-center justify-center hover:bg-gray-200 transition rounded-tr-3xl text-base"
               >
                 View all services
                 <i
@@ -214,16 +258,19 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="relative inline-block">
+                  <!-- Image Section -->
                   <img
                     src="assets/lady-makeup.png"
-                    alt="make up"
+                    alt="makeup"
                     class="h-auto"
                   />
+
+                  <!-- Content Overlay at Bottom -->
                   <div
-                    class="absolute bg-white bottom-0 rounded-tr-full -translate-x-1/2 -translate-y-1/2 bg-white/80 p-2 rounded text-left"
+                    class="absolute bottom-0 left-0 right-0 bg-white/80 rounded-tr-[100px] p-4 text-left"
                   >
-                    <h6>Face treatments</h6>
-                    <p class="small">
+                    <h6 class="text-lg font-semibold">Face treatments</h6>
+                    <p class="text-sm">
                       Hydrating Facials: Deeply nourishing facials designed to
                       hydrate and refresh the skin.
                     </p>
@@ -232,16 +279,19 @@
               </div>
               <div class="swiper-slide">
                 <div class="relative inline-block">
+                  <!-- Image Section -->
                   <img
                     src="assets/lady-makeup.png"
-                    alt="make up"
+                    alt="makeup"
                     class="h-auto"
                   />
+
+                  <!-- Content Overlay at Bottom -->
                   <div
-                    class="absolute bg-white bottom-0 rounded-tr-3xl -translate-x-1/2 -translate-y-1/2 bg-white/80 p-2 rounded text-center"
+                    class="absolute bottom-0 left-0 right-0 bg-white/80 rounded-tr-[100px] p-4 text-left"
                   >
-                    <h6>Face treatments</h6>
-                    <p class="small">
+                    <h6 class="text-lg font-semibold">Face treatments</h6>
+                    <p class="text-sm">
                       Hydrating Facials: Deeply nourishing facials designed to
                       hydrate and refresh the skin.
                     </p>
@@ -250,16 +300,19 @@
               </div>
               <div class="swiper-slide">
                 <div class="relative inline-block">
+                  <!-- Image Section -->
                   <img
                     src="assets/lady-makeup.png"
-                    alt="make up"
+                    alt="makeup"
                     class="h-auto"
                   />
+
+                  <!-- Content Overlay at Bottom -->
                   <div
-                    class="absolute bg-white bottom-0 rounded-tr-3xl -translate-x-1/2 -translate-y-1/2 bg-white/80 p-2 rounded text-center"
+                    class="absolute bottom-0 left-0 right-0 bg-white/80 rounded-tr-[100px] p-4 text-left"
                   >
-                    <h6>Face treatments</h6>
-                    <p class="small">
+                    <h6 class="text-lg font-semibold">Face treatments</h6>
+                    <p class="text-sm">
                       Hydrating Facials: Deeply nourishing facials designed to
                       hydrate and refresh the skin.
                     </p>
@@ -268,16 +321,19 @@
               </div>
               <div class="swiper-slide">
                 <div class="relative inline-block">
+                  <!-- Image Section -->
                   <img
                     src="assets/lady-makeup.png"
-                    alt="make up"
+                    alt="makeup"
                     class="h-auto"
                   />
+
+                  <!-- Content Overlay at Bottom -->
                   <div
-                    class="absolute bg-white bottom-0 rounded-tr-3xl -translate-x-1/2 -translate-y-1/2 bg-white/80 p-2 rounded text-center"
+                    class="absolute bottom-0 left-0 right-0 bg-white/80 rounded-tr-[100px] p-4 text-left"
                   >
-                    <h6>Face treatments</h6>
-                    <p class="small">
+                    <h6 class="text-lg font-semibold">Face treatments</h6>
+                    <p class="text-sm">
                       Hydrating Facials: Deeply nourishing facials designed to
                       hydrate and refresh the skin.
                     </p>
@@ -286,16 +342,19 @@
               </div>
               <div class="swiper-slide">
                 <div class="relative inline-block">
+                  <!-- Image Section -->
                   <img
                     src="assets/lady-makeup.png"
-                    alt="make up"
+                    alt="makeup"
                     class="h-auto"
                   />
+
+                  <!-- Content Overlay at Bottom -->
                   <div
-                    class="absolute bg-white bottom-0 rounded-tr-3xl -translate-x-1/2 -translate-y-1/2 bg-white/80 p-2 rounded text-center"
+                    class="absolute bottom-0 left-0 right-0 bg-white/80 rounded-tr-[100px] p-4 text-left"
                   >
-                    <h6>Face treatments</h6>
-                    <p class="small">
+                    <h6 class="text-lg font-semibold">Face treatments</h6>
+                    <p class="text-sm">
                       Hydrating Facials: Deeply nourishing facials designed to
                       hydrate and refresh the skin.
                     </p>
@@ -304,22 +363,48 @@
               </div>
               <div class="swiper-slide">
                 <div class="relative inline-block">
+                  <!-- Image Section -->
                   <img
                     src="assets/lady-makeup.png"
-                    alt="make up"
+                    alt="makeup"
                     class="h-auto"
                   />
+
+                  <!-- Content Overlay at Bottom -->
                   <div
-                    class="absolute bg-white bottom-0 rounded-tr-3xl -translate-x-1/2 -translate-y-1/2 bg-white/80 p-2 rounded text-center"
+                    class="absolute bottom-0 left-0 right-0 bg-white/80 rounded-tr-[100px] p-4 text-left"
                   >
-                    <h6>Face treatments</h6>
-                    <p class="small">
+                    <h6 class="text-lg font-semibold">Face treatments</h6>
+                    <p class="text-sm">
                       Hydrating Facials: Deeply nourishing facials designed to
                       hydrate and refresh the skin.
                     </p>
                   </div>
                 </div>
               </div>
+              <div class="swiper-slide">
+                <div class="relative inline-block">
+                  <!-- Image Section -->
+                  <img
+                    src="assets/lady-makeup.png"
+                    alt="makeup"
+                    class="h-auto"
+                  />
+
+                  <!-- Content Overlay at Bottom -->
+                  <div
+                    class="absolute bottom-0 left-0 right-0 bg-white/80 rounded-tr-[100px] p-4 text-left"
+                  >
+                    <h6 class="text-lg font-semibold">Face treatments</h6>
+                    <p class="text-sm">
+                      Hydrating Facials: Deeply nourishing facials designed to
+                      hydrate and refresh the skin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Repeat for other slides... -->
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -327,10 +412,10 @@
         </div>
       </section>
 
-      <section class="section-p">
+      <section class="md:py-[80px] py-[40px]">
         <div class="container mx-auto px-4 md:px-6">
           <div class="section-heading text-center">
-            <h2 class=" font-semibold">
+            <h2 class="font-semibold md:text-[42px] text-[30px]">
               See the transformation
             </h2>
           </div>
@@ -386,14 +471,12 @@
         </div>
       </section>
 
-      <section class="section-p">
+      <section class="md:py-[80px] py-[40px]">
         <div
-          class="container p-16 mx-auto bg-custom-pink rounded-xl md:rounded-3xl lg:flex lg:items-center lg:justify-between"
+          class="container p-16 mx-auto bg-[#fee0d9] rounded-xl md:rounded-3xl lg:flex lg:items-center lg:justify-between"
         >
           <div>
-            <h2
-              class="text-2xl font-semibold tracking-tight xl:text-3xl"
-            >
+            <h2 class="text-2xl font-semibold tracking-tight xl:text-3xl">
               Ready for radiant skin?
             </h2>
             <p class="mt-2">
@@ -415,33 +498,33 @@
         </div>
       </section>
 
-      <section class="section-p">
+      <section class="md:py-[80px] py-[40px]">
         <div class="container mx-auto px-6">
           <div
             class="grid md:grid-cols-3 grid-cols-2 items-center justify-around gap-6 w-full md:w-2/3 mx-auto"
           >
             <div class="text-center">
-              <h3 class="font-semibold">5,000+</h3>
+              <h3 class="font-semibold text-xl md:text-3xl">5,000+</h3>
               <p>Satisfied clients who trust us with their skincare.</p>
             </div>
             <div class="text-center">
-              <h3 class="font-semibold">10+</h3>
+              <h3 class="font-semibold text-xl md:text-3xl">10+</h3>
               <p>Years providing expert skincare solutions.</p>
             </div>
             <div class="text-center">
-              <h3 class="font-semibold">20,000+</h3>
+              <h3 class="font-semibold text-xl md:text-3xl">20,000+</h3>
               <p>Transformative treatments completed with care.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section-p">
+      <section class="md:py-[80px] py-[40px]">
         <div class="flex flex-col md:flex-row">
           <!-- Left side: Swiper Slider -->
           <div class="md:w-2/3 w-full">
             <div class="section-heading text-center mb-4 md:mb-8">
-              <h3 class="font-semibold">
+              <h3 class="font-semibold text-[30px] md:text-[36px]">
                 Our clients love their results
               </h3>
             </div>
@@ -449,7 +532,7 @@
             <div class="bg-white">
               <div class="container mx-auto px-4">
                 <div
-                  class="flex flex-col lg:flex-row items-center justify-between bg-custom-light-pink p-10"
+                  class="flex flex-col lg:flex-row items-center justify-between bg-[#ffefd7] p-10"
                 >
                   <!-- Testimonial Text -->
                   <div class="lg:w-2/3 text-center lg:text-left lg:mr-8">
@@ -474,9 +557,7 @@
                       ></i>
                     </div>
                     <!-- Testimonial Content -->
-                    <blockquote
-                      class="text-xl font-medium text-gray-800 leading-relaxed"
-                    >
+                    <blockquote class="text-lg text-gray-800 leading-relaxed">
                       “I’m so grateful I found Glisten! My skin has never looked
                       this good. The anti-aging treatments are gentle but
                       powerful. I finally feel comfortable in my skin again!”
@@ -500,17 +581,56 @@
           </div>
 
           <!-- Right side: Background section -->
-          <div class="md:w-1/3 w-full bg-brown rounded-br-3xl"></div>
+          <div
+            class="md:w-1/3 w-full bg-[#512729] rounded-br-[100px] text-white"
+          >
+            <!-- Header Section -->
+            <div class="flex items-center pt-[50px] px-10 space-x-4">
+              <img
+                src="assets/badge.png"
+                alt="Badge Icon"
+                class="w-10 h-auto"
+              />
+              <h2 class="text-[#FF835A] text-[36px] font-bold">
+                Certifications
+              </h2>
+            </div>
+
+            <!-- Certification Images -->
+            <div class="px-10 mt-6 space-y-4">
+              <img
+                src="assets/certi.png"
+                alt="Certification 1"
+                class="w-56 h-auto"
+              />
+              <img
+                src="assets/certi.png"
+                alt="Certification 2"
+                class="w-56 h-auto"
+              />
+            </div>
+
+            <!-- View All Button -->
+            <div class="px-10 mt-6">
+              <button
+                class="text-[#FF835A] px-4 border-b-2 border-[#FF835A] transition duration-300"
+              >
+                View all Certifications
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section-p bg-white">
+      <section class="md:py-[80px] py-[40px] bg-white">
         <div
           class="container mx-auto px-6 flex flex-col lg:flex-row justify-between items-start"
         >
           <!-- Left: Sponsors Section -->
-          <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
-            <h3 class="font-semibold mb-10">Our sponsors</h3>
+          <div class="w-full lg:w-3/5 mb-8 lg:mb-0">
+            <h3 class="font-semibold mb-10 md:text-[36px] text-30px">
+              Our sponsors
+            </h3>
             <div class="grid grid-cols-2 md:grid-cols-3 mb-8 gap-10">
               <!-- Sponsor logos (example placeholders) -->
               <img class="h-8" src="assets/graph.png" alt="Grapho" />
@@ -532,8 +652,8 @@
           </div>
 
           <!-- Right: Appointment Form Section -->
-          <div class="w-full lg:w-1/3 bg-pink-100 p-4 md:p-8 rounded-br-3xl">
-            <h5 class="font-semibold mb-12">Book an appointment</h5>
+          <div class="w-full lg:w-2/5 bg-pink-100 p-4 md:p-8 rounded-br-3xl">
+            <h5 class="font-semibold mb-6">Book an appointment</h5>
             <form action="#">
               <div class="grid grid-cols-1 gap-4">
                 <!-- Full Name and Phone -->
@@ -630,9 +750,11 @@
         </div>
       </section>
 
-      <section class="section-p bg-pink-50">
+      <section class="md:py-[80px] py-[40px] bg-pink-50">
         <div class="container mx-auto px-6 text-center">
-          <h2 class="font-semibold mb-14">Skincare tips & insights</h2>
+          <h2 class="font-semibold mb-14 md:text-[42px] text-[30px]">
+            Skincare tips & insights
+          </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Article 3 -->
             <div class="overflow-hidden">
@@ -686,7 +808,7 @@
         </div>
       </section>
 
-      <section class="section-p">
+      <section class="md:py-[80px] py-[40px]">
         <div class="swiper-container relative">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -731,7 +853,7 @@
       </section>
     </main>
 
-    <footer class="section-p bg-brown text-white">
+    <footer class="md:py-[80px] py-[40px] bg-[#512729] text-white">
       <div class="container mx-auto px-6">
         <!-- Logo and description -->
         <div class="flex items-center md:flex-row flex-col justify-between">
