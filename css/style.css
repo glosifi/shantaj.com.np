@@ -82,8 +82,8 @@ button {
   position: relative;
 }
 
-a:hover {
-  background: var(--dark-orange);
+nav a:hover {
+  color: var(--dark-orange);
 }
 
 .navbar a.active::after {
