@@ -83,7 +83,7 @@ button {
 }
 
 a:hover {
-  color: var(--dark-orange);
+  background: var(--dark-orange);
 }
 
 .navbar a.active::after {
