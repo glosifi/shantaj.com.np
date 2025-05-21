@@ -1,67 +1,94 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Scroll to section on menu click
-  const links = document.querySelectorAll(".navbar a");
+  // Smooth scrolling with proper header height offset
+  const header = document.querySelector(".site-header");
+  const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
+  const headerHeight = header.offsetHeight;
 
-  links.forEach((link) => {
+  // Smooth scroll to sections
+  navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
       const targetId = this.getAttribute("href").substring(1);
       const targetSection = document.getElementById(targetId);
 
       if (targetSection) {
+        const offsetPosition = targetSection.offsetTop - headerHeight;
         window.scrollTo({
-          top: targetSection.offsetTop - 50, // Adjusting for navbar height
+          top: offsetPosition,
           behavior: "smooth",
         });
       }
     });
   });
 
-  // Add active class on scroll to sections
-  const sections = document.querySelectorAll("section");
+  // Active link highlighting on scroll
+  const sections = document.querySelectorAll("section[id]");
   const options = {
-    threshold: 0.5, // This can be adjusted depending on when you want the link to become active
+    threshold: 0.5,
+    rootMargin: `-${headerHeight}px 0px -50% 0px`,
   };
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".swiper-container", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    centeredSlides: false, // Disable centering to avoid layout issues
-    on: {
-      init: function () {
-        this.update(); // Ensure correct initialization
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute("id");
+      const link = document.querySelector(`.navbar a[href="#${id}"]`);
+
+      if (entry.isIntersecting) {
+        link?.classList.add("active");
+      } else {
+        link?.classList.remove("active");
+      }
+    });
+  }, options);
+
+  sections.forEach((section) => observer.observe(section));
+
+  // Initialize Swiper sliders
+  const initializeSwiper = (selector, config) => {
+    new Swiper(selector, {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-    },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        320: { slidesPerView: 1 },
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+        1440: { slidesPerView: 4 },
+      },
+      ...config,
+    });
+  };
+
+  // Initialize different swiper instances
+  initializeSwiper(".services-swiper", {
     breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      480: {
-        slidesPerView: 1,
-        spaceBetween: 15,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
+      320: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
+
+  initializeSwiper(".gallery-swiper", {
+    slidesPerView: 2,
+    breakpoints: {
+      640: { slidesPerView: 3 },
+      1024: { slidesPerView: 4 },
+      1440: { slidesPerView: 5 },
+    },
+  });
+  initializeSwiper(".testimonials-swiper", {
+    slidesPerView: 1,
+    breakpoints: {
       1024: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-      },
-      1440: {
-        slidesPerView: 6,
+        slidesPerView: 1,
         spaceBetween: 40,
       },
     },

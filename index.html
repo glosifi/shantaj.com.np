@@ -25,114 +25,162 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header class="site-header fixed z-50 w-full gradient">
-      <div class="container mx-auto px-6 py-4">
+    <header class="site-header fixed z-50 w-full bg-white shadow-sm gradient">
+      <div class="container mx-auto px-4 sm:px-6 py-3">
         <div class="flex justify-between items-center">
-          <div class="brand space-x-3">
+          <!-- Logo -->
+          <div class="brand flex items-center space-x-3">
             <a href="index.html">
               <img
-                src="assets/shantaj-logo.png"
+                src="assets/santaj-logo.png"
                 alt="Shantaj"
-                class="md:w-28 w-20"
+                class="w-12 md:w-16 transition-all duration-300 hover:opacity-90"
               />
             </a>
+            <p class="hidden md:block text-gray-700 font-medium">
+              Shantaj Beauty Parlor and Salon
+            </p>
           </div>
 
-          <!-- Navbar links for desktop -->
-          <nav class="navbar hidden md:flex">
-            <ul class="flex space-x-8 items-center">
-              <li>
-                <a href="index.html" class="text-gray-800 hover:text-pink-500"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a href="#about" class="text-gray-800 hover:text-pink-500"
-                  >About Us</a
-                >
-              </li>
-              <li>
-                <a href="#services" class="text-gray-800 hover:text-pink-500"
-                  >Contact</a
-                >
-              </li>
-            </ul>
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-pink-500 transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-pink-500 transition-colors"
+              >About</a
+            >
+            <a
+              href="#services"
+              class="text-gray-700 hover:text-pink-500 transition-colors"
+              >Services</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-pink-500 transition-colors"
+              >Contact</a
+            >
           </nav>
 
-          <div class="sm:flex items-center gap-2 hidden">
-            <img src="assets/tele.png" alt="telephone" />
-            <a href="/"> +(123) 456-7890</a>
+          <!-- Contact Info -->
+          <div class="hidden lg:flex items-center space-x-2">
+            <img src="assets/tele.png" alt="Phone" class="w-5 h-5" />
+            <a href="tel:+1234567890" class="text-gray-700 hover:text-pink-500"
+              >+(123) 456-7890</a
+            >
           </div>
 
-          <!-- Hamburger icon for mobile -->
-          <div id="mobile-menu" class="md:hidden flex flex-col cursor-pointer">
-            <div class="bar w-6 h-1 bg-gray-800 mb-1"></div>
-            <div class="bar w-6 h-1 bg-gray-800 mb-1"></div>
-            <div class="bar w-6 h-1 bg-gray-800"></div>
-          </div>
-        </div>
-
-        <!-- Mobile Menu with Slide effect -->
-        <nav
-          id="mobile-nav"
-          class="fixed top-0 right-0 bg-gray-800 text-white w-2/3 h-full p-8 transform translate-x-full transition-transform duration-500 ease-in-out hidden"
-        >
-          <button id="close-menu" class="absolute top-4 right-4">
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-button"
+            class="lg:hidden p-2 rounded-lg hover:bg-gray-100"
+          >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-8 w-8 text-white"
+              class="w-6 h-6"
               fill="none"
-              viewBox="0 0 24 24"
               stroke="currentColor"
+              viewBox="0 0 24 24"
             >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
+                d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
           </button>
-          <ul class="space-y-4 mt-8">
-            <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
-            <li><a href="#about" class="hover:text-gray-400">About Us</a></li>
-            <li>
-              <a href="#services" class="hover:text-gray-400">Services</a>
-            </li>
-            <li><button class="btn btn-primary">Contact</button></li>
-          </ul>
-        </nav>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300"
+      >
+        <div class="container mx-auto px-4 py-6">
+          <div class="flex justify-between items-center mb-8">
+            <img src="assets/santaj-logo.png" alt="Shantaj" class="w-12" />
+            <button id="close-menu" class="p-2">
+              <svg
+                class="w-6 h-6 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <nav class="space-y-4">
+            <a
+              href="index.html"
+              class="block py-2 text-gray-700 hover:text-pink-500"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="block py-2 text-gray-700 hover:text-pink-500"
+              >About</a
+            >
+            <a
+              href="#services"
+              class="block py-2 text-gray-700 hover:text-pink-500"
+              >Services</a
+            >
+            <a
+              href="#contact"
+              class="block py-2 text-gray-700 hover:text-pink-500"
+              >Contact</a
+            >
+          </nav>
+          <div class="mt-8 pt-4 border-t border-gray-100">
+            <div class="flex items-center space-x-2">
+              <img src="assets/tele.png" alt="Phone" class="w-5 h-5" />
+              <a
+                href="tel:+1234567890"
+                class="text-gray-700 hover:text-pink-500"
+                >+(123) 456-7890</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
-    <main>
+    <main class="pt-16">
       <!-- Hero Section -->
-      <section class="py-[75px] bg-[#fcf3ee]">
-        <div class="container mx-auto px-6">
-          <div class="flex md:flex-row flex-col items-center gap-10">
-            <div class="md:w-1/3 w-full">
+      <section class="py-12 md:py-24 gradient">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2 text-center md:text-left">
               <h1
-                class="leading-none text-[32px] md:text-[65px] font-medium text-[#34251F]"
+                class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight"
               >
-                Glow naturally with skinn care
+                Glow Naturally With Skincare
               </h1>
-              <p class="mt-4 text-[16px] md:text-[18px] text-[#5a524e]">
+              <p class="mt-4 text-lg text-gray-600 md:pr-8">
                 Our skincare line is crafted with pure, high-quality ingredients
                 for visible results.
               </p>
-              <button class="flex items-center gap-2 btn btn-primary mt-6">
-                <img
-                  src="assets/tele.png"
-                  alt="Book an appointment"
-                  class="w-5 h-5"
-                />
-                <p class="font-medium text-[16px]">Book an appointment</p>
+              <button
+                class="mt-8 bg-[#512729] rounded-tr-[20px] text-white px-8 py-3 transition-colors"
+              >
+                Book Appointment
               </button>
             </div>
-            <div class="md:w-2/3 w-full">
+            <div class="md:w-1/2 mt-8 md:mt-0">
               <img
                 src="assets/hero-section.png"
-                alt="hero-section"
+                alt="Skincare Products"
                 class="w-full h-auto"
               />
             </div>
@@ -140,7 +188,10 @@
         </div>
       </section>
 
-      <section class="md:py-[80px] py-[40px]">
+      <section
+        class="md:py-[80px] py-[40px] scroll-mt-[50px] md:scroll-mt-[80px]"
+        id="about"
+      >
         <div class="container mx-auto px-6">
           <!-- Heading and Intro Text -->
           <div class="text-center mb-10 md:mb-16 justify-center items-center">
@@ -219,12 +270,15 @@
         </div>
       </section>
 
-      <section class="md:py-[80px] py-[40px] bg-[#512729] py-16">
+      <section
+        class="md:py-[80px] py-[40px] bg-[#512729] py-16 scroll-mt-[50px] md:scroll-mt-[80px]"
+        id="services"
+      >
         <div class="container mx-auto px-6">
           <div
             class="section-heading flex flex-col lg:flex-row items-center justify-between text-[#ff835a] gap-0 lg:gap-20 md:gap-4 mb-10"
           >
-            <div class="md:flex md:flex-row sm:flex-col">
+            <div class="md:flex md:flex-row sm:flex-col items-center">
               <div class="md:w-1/3 text-center md:text-left">
                 <h3
                   class="font-semibold leading-none text-[#ff835a] mb-4 text-[30px] md:text-[42px]"
@@ -243,7 +297,7 @@
 
             <div class="md:w-1/3 text-center md:text-right">
               <button
-                class="btn bg-white border-2 py-3 text-black font-semibold flex items-center justify-center hover:bg-gray-200 transition rounded-tr-3xl text-base"
+                class="btn m-0 bg-white border-2 py-3 text-black font-semibold flex items-center justify-center hover:bg-gray-200 transition rounded-tr-3xl text-base"
               >
                 View all services
                 <i
@@ -254,7 +308,7 @@
             </div>
           </div>
 
-          <div class="swiper-container relative">
+          <div class="swiper-container relative services-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="relative inline-block">
@@ -432,16 +486,26 @@
                 </p>
               </div>
               <div class="flex items-center gap-6 lg:gap-10">
-                <img
-                  src="assets/before-image.png"
-                  alt="before-image"
-                  class="w-36 md:w-48 lg:w-56"
-                />
-                <img
-                  src="assets/after-image.png"
-                  alt="after-image"
-                  class="w-36 md:w-48 lg:w-56"
-                />
+                <div class="flex flex-col items-center">
+                  <img
+                    src="assets/before-image.png"
+                    alt="Before treatment"
+                    class="w-36 md:w-48 lg:w-56"
+                  />
+                  <span class="mt-2 text-sm font-medium text-gray-600"
+                    >Before</span
+                  >
+                </div>
+                <div class="flex flex-col items-center">
+                  <img
+                    src="assets/after-image.png"
+                    alt="After treatment"
+                    class="w-36 md:w-48 lg:w-56"
+                  />
+                  <span class="mt-2 text-sm font-medium text-gray-600"
+                    >After</span
+                  >
+                </div>
               </div>
             </div>
 
@@ -455,16 +519,26 @@
                 </p>
               </div>
               <div class="flex items-center gap-6 lg:gap-10">
-                <img
-                  src="assets/before-image.png"
-                  alt="before-image"
-                  class="w-36 md:w-48 lg:w-56"
-                />
-                <img
-                  src="assets/after-image.png"
-                  alt="after-image"
-                  class="w-36 md:w-48 lg:w-56"
-                />
+                <div class="flex flex-col items-center">
+                  <img
+                    src="assets/before-image.png"
+                    alt="Before treatment"
+                    class="w-36 md:w-48 lg:w-56"
+                  />
+                  <span class="mt-2 text-sm font-medium text-gray-600"
+                    >Before</span
+                  >
+                </div>
+                <div class="flex flex-col items-center">
+                  <img
+                    src="assets/after-image.png"
+                    alt="After treatment"
+                    class="w-36 md:w-48 lg:w-56"
+                  />
+                  <span class="mt-2 text-sm font-medium text-gray-600"
+                    >After</span
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -473,7 +547,7 @@
 
       <section class="md:py-[80px] py-[40px]">
         <div
-          class="container p-16 mx-auto bg-[#fee0d9] rounded-xl md:rounded-3xl lg:flex lg:items-center lg:justify-between"
+          class="container md:p-16 p-10 mx-auto bg-[#fee0d9] rounded-xl md:rounded-3xl lg:flex lg:items-center lg:justify-between"
         >
           <div>
             <h2 class="text-2xl font-semibold tracking-tight xl:text-3xl">
@@ -486,13 +560,15 @@
           </div>
 
           <div class="mt-8 lg:mt-0">
-            <div class="sm:flex items-center gap-2 hidden lg:flex">
-              <button
+            <div class="flex items-center gap-2">
+              <a
+                href="https://glosifi.com/"
+                target="_blank"
                 class="flex items-center gap-2 px-6 py-2 tracking-wide capitalize btn-primary rounded-tr-3xl"
                 aria-label="Schedule appointment"
               >
                 <i class="fa-solid fa-phone"></i> Schedule appointment
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -501,19 +577,42 @@
       <section class="md:py-[80px] py-[40px]">
         <div class="container mx-auto px-6">
           <div
-            class="grid md:grid-cols-3 grid-cols-2 items-center justify-around gap-6 w-full md:w-2/3 mx-auto"
+            class="grid md:grid-cols-3 grid-cols-1 gap-6 w-full md:w-2/3 mx-auto"
           >
-            <div class="text-center">
-              <h3 class="font-semibold text-xl md:text-3xl">5,000+</h3>
-              <p>Satisfied clients who trust us with their skincare.</p>
+            <!-- Stat Item 1 -->
+            <div class="flex-1">
+              <div
+                class="text-center border border-gray-300 py-10 px-5 rounded h-full flex flex-col justify-between"
+              >
+                <h3 class="font-semibold text-xl md:text-3xl mb-4">5,000+</h3>
+                <p class="mt-auto">
+                  Satisfied clients who trust us with their skincare.
+                </p>
+              </div>
             </div>
-            <div class="text-center">
-              <h3 class="font-semibold text-xl md:text-3xl">10+</h3>
-              <p>Years providing expert skincare solutions.</p>
+
+            <!-- Stat Item 2 -->
+            <div class="flex-1">
+              <div
+                class="text-center border border-gray-300 py-10 px-5 rounded h-full flex flex-col justify-between"
+              >
+                <h3 class="font-semibold text-xl md:text-3xl mb-4">10+</h3>
+                <p class="mt-auto">
+                  Years providing expert skincare solutions.
+                </p>
+              </div>
             </div>
-            <div class="text-center">
-              <h3 class="font-semibold text-xl md:text-3xl">20,000+</h3>
-              <p>Transformative treatments completed with care.</p>
+
+            <!-- Stat Item 3 -->
+            <div class="flex-1">
+              <div
+                class="text-center border border-gray-300 py-10 px-5 rounded h-full flex flex-col justify-between"
+              >
+                <h3 class="font-semibold text-xl md:text-3xl mb-4">20,000+</h3>
+                <p class="mt-auto">
+                  Transformative treatments completed with care.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -521,70 +620,186 @@
 
       <section class="md:py-[80px] py-[40px]">
         <div class="flex flex-col md:flex-row">
-          <!-- Left side: Swiper Slider -->
+          <!-- Testimonial Slider -->
           <div class="md:w-2/3 w-full">
             <div class="section-heading text-center mb-4 md:mb-8">
-              <h3 class="font-semibold text-[30px] md:text-[36px]">
+              <h3 class="font-semibold text-[30px] md:text-[36px] capitalize">
                 Our clients love their results
               </h3>
             </div>
 
             <div class="bg-white">
-              <div class="container mx-auto px-4">
-                <div
-                  class="flex flex-col lg:flex-row items-center justify-between bg-[#ffefd7] p-10"
-                >
-                  <!-- Testimonial Text -->
-                  <div class="lg:w-2/3 text-center lg:text-left lg:mr-8">
-                    <!-- Star Rating -->
-                    <div
-                      class="flex justify-center lg:justify-start items-center mb-4"
-                    >
-                      <i
-                        class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
-                      ></i>
-                      <i
-                        class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
-                      ></i>
-                      <i
-                        class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
-                      ></i>
-                      <i
-                        class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
-                      ></i>
-                      <i
-                        class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
-                      ></i>
+              <div class="swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                    <div class="container mx-auto px-4">
+                      <div
+                        class="flex flex-col lg:flex-row items-center justify-between bg-[#ffefd7] p-10"
+                      >
+                        <div class="lg:w-2/3 text-center lg:text-left lg:mr-8">
+                          <div
+                            class="flex justify-center lg:justify-start items-center mb-4"
+                          >
+                            <div
+                              class="flex justify-center lg:justify-start items-center mb-4"
+                            >
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                            </div>
+                          </div>
+                          <blockquote
+                            class="text-lg text-gray-800 leading-relaxed"
+                          >
+                            “I’m so grateful I found Glisten! My skin has never
+                            looked this good. The anti-aging treatments are
+                            gentle but powerful. I finally feel comfortable in
+                            my skin again!”
+                          </blockquote>
+                          <p class="mt-4 text-lg font-semibold text-gray-900">
+                            Emma T.
+                          </p>
+                        </div>
+                        <div class="lg:w-1/3 mt-8 lg:mt-0">
+                          <img
+                            src="assets/testimonial-img.png"
+                            alt="Emma T. photo"
+                            class="w-full h-auto object-cover mx-auto lg:mx-0 rounded-lg"
+                          />
+                        </div>
+                      </div>
                     </div>
-                    <!-- Testimonial Content -->
-                    <blockquote class="text-lg text-gray-800 leading-relaxed">
-                      “I’m so grateful I found Glisten! My skin has never looked
-                      this good. The anti-aging treatments are gentle but
-                      powerful. I finally feel comfortable in my skin again!”
-                    </blockquote>
-                    <p class="mt-4 text-lg font-semibold text-gray-900">
-                      Emma T.
-                    </p>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="container mx-auto px-4">
+                      <div
+                        class="flex flex-col lg:flex-row items-center justify-between bg-[#ffefd7] p-10"
+                      >
+                        <div class="lg:w-2/3 text-center lg:text-left lg:mr-8">
+                          <div
+                            class="flex justify-center lg:justify-start items-center mb-4"
+                          >
+                            <div
+                              class="flex justify-center lg:justify-start items-center mb-4"
+                            >
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                            </div>
+                          </div>
+                          <blockquote
+                            class="text-lg text-gray-800 leading-relaxed"
+                          >
+                            “I’m so grateful I found Glisten! My skin has never
+                            looked this good. The anti-aging treatments are
+                            gentle but powerful. I finally feel comfortable in
+                            my skin again!”
+                          </blockquote>
+                          <p class="mt-4 text-lg font-semibold text-gray-900">
+                            Emma T.
+                          </p>
+                        </div>
+                        <div class="lg:w-1/3 mt-8 lg:mt-0">
+                          <img
+                            src="assets/testimonial-img.png"
+                            alt="Emma T. photo"
+                            class="w-full h-auto object-cover mx-auto lg:mx-0 rounded-lg"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
-                  <!-- Testimonial Image -->
-                  <div class="lg:w-1/3 mt-8 lg:mt-0">
-                    <img
-                      class="w-full h-auto object-cover mx-auto lg:mx-0"
-                      src="assets/testimonial-img.png"
-                      alt="Emma T. photo"
-                    />
-                  </div>
+                  <!-- Slide 2 -->
+                  <!-- <div class="swiper-slide">
+                    <div class="container mx-auto px-4">
+                      <div
+                        class="flex flex-col lg:flex-row items-center justify-between bg-[#ffefd7] p-10"
+                      >
+                        <div class="lg:w-2/3 text-center lg:text-left lg:mr-8">
+                          <div
+                            class="flex justify-center lg:justify-start items-center mb-4"
+                          >
+                            <div
+                              class="flex justify-center lg:justify-start items-center mb-4"
+                            >
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                            </div>
+                          </div>
+                          <blockquote
+                            class="text-lg text-gray-800 leading-relaxed"
+                          >
+                            “I’m so grateful I found Glisten! My skin has never
+                            looked this good. The anti-aging treatments are
+                            gentle but powerful. I finally feel comfortable in
+                            my skin again!”
+                          </blockquote>
+                          <p class="mt-4 text-lg font-semibold text-gray-900">
+                            Emma T.
+                          </p>
+                        </div>
+                        <div class="lg:w-1/3 mt-8 lg:mt-0">
+                          <img
+                            src="assets/testimonial-img.png"
+                            alt="Emma T. photo"
+                            class="w-full h-auto object-cover mx-auto lg:mx-0 rounded-lg"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
                 </div>
+
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next !text-[#512729]"></div>
+                <div class="swiper-button-prev !text-[#512729]"></div>
               </div>
             </div>
           </div>
 
-          <!-- Right side: Background section -->
+          <!-- Certifications Section -->
           <div
             class="md:w-1/3 w-full bg-[#512729] rounded-br-[100px] text-white"
           >
-            <!-- Header Section -->
             <div class="flex items-center pt-[50px] px-10 space-x-4">
               <img
                 src="assets/badge.png"
@@ -596,7 +811,6 @@
               </h2>
             </div>
 
-            <!-- Certification Images -->
             <div class="px-10 mt-6 space-y-4">
               <img
                 src="assets/certi.png"
@@ -610,10 +824,9 @@
               />
             </div>
 
-            <!-- View All Button -->
-            <div class="px-10 mt-6">
+            <div class="px-10 mt-6 pb-8">
               <button
-                class="text-[#FF835A] px-4 border-b-2 border-[#FF835A] transition duration-300"
+                class="text-[#FF835A] px-4 border-b-2 border-[#FF835A] hover:border-transparent transition duration-300"
               >
                 View all Certifications
               </button>
@@ -622,7 +835,10 @@
         </div>
       </section>
 
-      <section class="md:py-[80px] py-[40px] bg-white">
+      <section
+        class="md:py-[80px] py-[40px] bg-white scroll-mt-[50px] md:scroll-mt-[80px]"
+        id="contact"
+      >
         <div
           class="container mx-auto px-6 flex flex-col lg:flex-row justify-between items-start"
         >
@@ -740,7 +956,7 @@
                 <!-- Submit Button -->
                 <button
                   type="submit"
-                  class="btn btn-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-orange-600 transition-colors"
+                  class="btn btn-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-orange-600 transition-colors flex items-center justify-center"
                 >
                   <i class="fa-solid fa-paper-plane mr-2"></i> Submit
                 </button>
@@ -809,7 +1025,7 @@
       </section>
 
       <section class="md:py-[80px] py-[40px]">
-        <div class="swiper-container relative">
+        <div class="swiper-container relative gallery-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="relative inline-block">
@@ -858,10 +1074,10 @@
         <!-- Logo and description -->
         <div class="flex items-center md:flex-row flex-col justify-between">
           <div
-            class="mb-4 flex md:flex-row flex-col items-center gap-10 w-full md:w-2/3"
+            class="flex md:flex-row flex-col justify-between items-center gap-10 w-full md:w-2/3"
           >
             <img
-              src="assets/footer-logo.png"
+              src="assets/santaj-logo.png"
               alt="G skincare logo"
               class="w-28"
             />
@@ -946,21 +1162,37 @@
           </ul>
         </div>
 
-        <div>
-          <h5 class="font-medium mb-4 text-white">Follow Us</h5>
-          <div class="flex space-x-4">
-            <a href="#"
-              ><i class="fa fa-instagram hover:text-orange text-white"></i
-            ></a>
-            <a href="#"
-              ><i class="fa fa-facebook hover:text-orange text-white"></i
-            ></a>
-            <a href="#"
-              ><i class="fa fa-twitter hover:text-orange text-white"></i
-            ></a>
-            <a href="#"
-              ><i class="fa fa-pinterest hover:text-orange text-white"></i
-            ></a>
+        <div class="mt-8 md:mt-0">
+          <h5 class="font-semibold mb-6 text-white text-lg">Follow Us</h5>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              aria-label="Visit our Instagram profile"
+              class="text-white hover:text-orange-400 transition-colors duration-300 transform hover:scale-110"
+            >
+              <i class="fab fa-instagram text-2xl"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="Visit our Facebook page"
+              class="text-white hover:text-orange-400 transition-colors duration-300 transform hover:scale-110"
+            >
+              <i class="fab fa-facebook-f text-2xl"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="Follow us on Twitter"
+              class="text-white hover:text-orange-400 transition-colors duration-300 transform hover:scale-110"
+            >
+              <i class="fab fa-twitter text-2xl"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="Check our Pinterest board"
+              class="text-white hover:text-orange-400 transition-colors duration-300 transform hover:scale-110"
+            >
+              <i class="fab fa-pinterest-p text-2xl"></i>
+            </a>
           </div>
         </div>
       </div>
