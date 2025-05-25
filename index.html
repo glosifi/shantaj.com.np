@@ -1,40 +1,1210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shantaj Beauty Parlour</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            color: #d63384;
-        }
-        p {
-            font-size: 18px;
-            color: #555;
-        }
-        .footer {
-            margin-top: 50px;
-            font-size: 16px;
-            color: #888;
-        }
-        a {
-            color: #d63384;
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
-    <h1>Shantaj Beauty Parlour</h1>
-    <p>Welcome to Shantaj Beauty Parlour!</p>
-    <p>Website is under construction.</p>
-    <div class="footer">
-        Powered by <a href="https://glossybyte.com" target="_blank">GlossyByte.com</a>
-    </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shantaj Beauty and Wellness</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="site-header fixed z-50 w-full bg-white shadow-sm gradient">
+      <div class="container mx-auto px-4 sm:px-6 py-3">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="brand flex items-center space-x-3">
+            <a href="index.html">
+              <img
+                src="assets/santaj-logo.png"
+                alt="Shantaj"
+                class="w-12 md:w-16 transition-all duration-300 hover:opacity-90"
+              />
+            </a>
+            <p class="hidden md:block text-gray-700 font-medium">
+              Shantaj Beauty Parlor and Salon
+            </p>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex space-x-8">
+            <a href="index.html" class="text-gray-700">Home</a>
+            <a href="#about" class="text-gray-700 transition-colors">About</a>
+            <a href="#services" class="text-gray-700 transition-colors"
+              >Services</a
+            >
+            <a href="#contact" class="text-gray-700 transition-colors"
+              >Contact</a
+            >
+          </nav>
+
+          <!-- Contact Info -->
+          <div class="hidden lg:flex items-center space-x-2">
+            <img src="assets/tele.png" alt="Phone" class="w-5 h-5" />
+            <a href="tel:+1234567890" class="text-gray-700">+(123) 456-7890</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-button"
+            class="lg:hidden p-2 rounded-lg hover:bg-gray-100"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300"
+      >
+        <div class="container mx-auto px-4 py-6">
+          <div class="flex justify-between items-center mb-8">
+            <img src="assets/santaj-logo.png" alt="Shantaj" class="w-12" />
+            <button id="close-menu" class="p-2">
+              <svg
+                class="w-6 h-6 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <nav class="space-y-4">
+            <a href="index.html" class="block py-2 text-gray-700">Home</a>
+            <a href="#about" class="block py-2 text-gray-700">About</a>
+            <a href="#services" class="block py-2 text-gray-700">Services</a>
+            <a href="#contact" class="block py-2 text-gray-700">Contact</a>
+          </nav>
+          <div class="mt-8 pt-4 border-t border-gray-100">
+            <div class="flex items-center space-x-2">
+              <img src="assets/tele.png" alt="Phone" class="w-5 h-5" />
+              <a href="tel:+1234567890" class="text-gray-700"
+                >+(123) 456-7890</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-16">
+      <!-- Hero Section -->
+      <section class="py-12 md:py-24 gradient">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2 text-center md:text-left">
+              <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight"
+              >
+                Glow Naturally With Skincare
+              </h1>
+
+              <p class="mt-4 text-base md:text-lg text-gray-600 md:pr-8">
+                Our skincare line is crafted with pure, high-quality ingredients
+                for visible results.
+              </p>
+
+              <a
+                href="https://glosifi.com/"
+                target="_blank"
+                class="inline-block mt-8 btn-secondary text-white font-medium px-8 py-3 rounded-tr-[20px] transition-colors duration-300"
+              >
+                Book Appointment
+              </a>
+            </div>
+
+            <div class="md:w-1/2 mt-8 md:mt-0">
+              <img
+                src="assets/hero-section.png"
+                alt="Skincare Products"
+                class="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="md:py-[80px] py-[40px] scroll-mt-[50px] md:scroll-mt-[80px]"
+        id="about"
+      >
+        <div class="container mx-auto px-6">
+          <!-- Heading and Intro Text -->
+          <div class="text-center mb-10 md:mb-16 justify-center items-center">
+            <img
+              src="assets/sparkle-4.png"
+              class="w-14 h-auto mx-auto"
+              alt="sparkle"
+            />
+            <h2
+              class="text-[30px] md:text-[36px] font-bold text-[#34251F] capitalize"
+            >
+              The ultimate guide to radiant beauty
+            </h2>
+            <p
+              class="md:w-1/2 w-full mx-auto mt-4 text-[#5a524e] text-[16px] md:text-[18px]"
+            >
+              At Skinn Care, we believe that healthy skin starts with pure,
+              effective ingredients. Our journey began with a simple mission.
+            </p>
+            <button
+              class="px-[20px] py-[10px] mt-6 btn-secondary text-white flex items-center justify-center gap-2 mx-auto"
+            >
+              Learn more
+              <i class="fa-solid fa-chevron-right" style="font-size: 12px"></i>
+            </button>
+          </div>
+
+          <!-- Three Feature Boxes -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10"
+          >
+            <!-- Feature 1: Clean Ingredients -->
+            <div
+              class="flex flex-col items-center text-center bg-[#fee0d9] py-10 md:py-14 rounded-3xl px-10"
+            >
+              <img src="assets/vials.png" alt="vials" class="mb-4" />
+              <h6 class="font-semibold mb-2 text-[20px] text-[#34251F]">
+                Clean ingredients
+              </h6>
+              <p class="text-[16px] text-[#5a524e]">
+                We prioritize high-quality, natural ingredients that are safe
+                and effective for your skin.
+              </p>
+            </div>
+
+            <!-- Feature 2: Sustainable Beauty -->
+            <div
+              class="flex flex-col items-center text-center bg-[#ffefd7] py-10 md:py-14 rounded-3xl px-10"
+            >
+              <img
+                src="assets/eye-dropper.png"
+                alt="eye dropper"
+                class="mb-4"
+              />
+              <h6 class="font-semibold mb-2 text-[20px] text-[#34251F]">
+                Sustainable beauty
+              </h6>
+              <p class="text-[16px] text-[#5a524e]">
+                Our eco-conscious approach ensures that our products are kind to
+                the environment and your skin.
+              </p>
+            </div>
+
+            <!-- Feature 3: Dermatologist Approved -->
+            <div
+              class="flex flex-col items-center text-center bg-[#fcf3ee] py-10 md:py-12 rounded-3xl px-10"
+            >
+              <img src="assets/shield-check.png" alt="shield" class="mb-4" />
+              <h6 class="font-semibold mb-2 text-[20px] text-[#34251F]">
+                Dermatologist-approved
+              </h6>
+              <p class="text-[16px] text-[#5a524e]">
+                Each formula is rigorously tested for purity and efficacy, so
+                you can trust what goes on your skin.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="md:py-[80px] py-[40px] bg-[#512729] py-16 scroll-mt-[50px] md:scroll-mt-[80px]"
+        id="services"
+      >
+        <div class="container mx-auto px-6">
+          <div
+            class="section-heading flex flex-col lg:flex-row items-center justify-between text-[#ff835a] gap-0 lg:gap-20 md:gap-4 mb-10"
+          >
+            <div class="md:flex md:flex-row sm:flex-col items-center">
+              <div class="md:w-1/3 text-center md:text-left">
+                <h3
+                  class="font-semibold leading-none text-[#ff835a] mb-4 text-[30px] md:text-[42px]"
+                >
+                  Our Skincare Services
+                </h3>
+              </div>
+              <div class="md:w-2/3 text-center md:text-left">
+                <p class="leading-relaxed mb-4 text-sm md:text-base">
+                  Whether you're new to skincare or a seasoned pro, our services
+                  are here to help you achieve your healthiest skin. Explore our
+                  tailored offerings below.
+                </p>
+              </div>
+            </div>
+
+            <div class="md:w-1/3 text-center md:text-right">
+              <button
+                class="btn m-0 btn-primary py-3 font-semibold flex items-center justify-center transition rounded-tr-3xl text-base"
+              >
+                View all services
+                <i
+                  class="fa-solid fa-chevron-right ml-2"
+                  style="font-size: 12px"
+                ></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="swiper-container relative services-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="relative inline-block">
+                  <!-- Image Section -->
+                  <img
+                    src="assets/lady-makeup.png"
+                    alt="makeup"
+                    class="h-auto"
+                  />
+
+                  <!-- Content Overlay at Bottom -->
+                  <div
+                    class="absolute bottom-0 left-0 right-0 bg-white/80 rounded-tr-[100px] p-4 text-left"
+                  >
+                    <h6 class="text-lg font-semibold">Face treatments</h6>
+                    <p class="text-sm">
+                      Hydrating Facials: Deeply nourishing facials designed to
+                      hydrate and refresh the skin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="relative inline-block">
+                  <!-- Image Section -->
+                  <img
+                    src="assets/lady-makeup.png"
+                    alt="makeup"
+                    class="h-auto"
+                  />
+
+                  <!-- Content Overlay at Bottom -->
+                  <div
+                    class="absolute bottom-0 left-0 right-0 bg-white/80 rounded-tr-[100px] p-4 text-left"
+                  >
+                    <h6 class="text-lg font-semibold">Face treatments</h6>
+                    <p class="text-sm">
+                      Hydrating Facials: Deeply nourishing facials designed to
+                      hydrate and refresh the skin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="relative inline-block">
+                  <!-- Image Section -->
+                  <img
+                    src="assets/lady-makeup.png"
+                    alt="makeup"
+                    class="h-auto"
+                  />
+
+                  <!-- Content Overlay at Bottom -->
+                  <div
+                    class="absolute bottom-0 left-0 right-0 bg-white/80 rounded-tr-[100px] p-4 text-left"
+                  >
+                    <h6 class="text-lg font-semibold">Face treatments</h6>
+                    <p class="text-sm">
+                      Hydrating Facials: Deeply nourishing facials designed to
+                      hydrate and refresh the skin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="relative inline-block">
+                  <!-- Image Section -->
+                  <img
+                    src="assets/lady-makeup.png"
+                    alt="makeup"
+                    class="h-auto"
+                  />
+
+                  <!-- Content Overlay at Bottom -->
+                  <div
+                    class="absolute bottom-0 left-0 right-0 bg-white/80 rounded-tr-[100px] p-4 text-left"
+                  >
+                    <h6 class="text-lg font-semibold">Face treatments</h6>
+                    <p class="text-sm">
+                      Hydrating Facials: Deeply nourishing facials designed to
+                      hydrate and refresh the skin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="relative inline-block">
+                  <!-- Image Section -->
+                  <img
+                    src="assets/lady-makeup.png"
+                    alt="makeup"
+                    class="h-auto"
+                  />
+
+                  <!-- Content Overlay at Bottom -->
+                  <div
+                    class="absolute bottom-0 left-0 right-0 bg-white/80 rounded-tr-[100px] p-4 text-left"
+                  >
+                    <h6 class="text-lg font-semibold">Face treatments</h6>
+                    <p class="text-sm">
+                      Hydrating Facials: Deeply nourishing facials designed to
+                      hydrate and refresh the skin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="relative inline-block">
+                  <!-- Image Section -->
+                  <img
+                    src="assets/lady-makeup.png"
+                    alt="makeup"
+                    class="h-auto"
+                  />
+
+                  <!-- Content Overlay at Bottom -->
+                  <div
+                    class="absolute bottom-0 left-0 right-0 bg-white/80 rounded-tr-[100px] p-4 text-left"
+                  >
+                    <h6 class="text-lg font-semibold">Face treatments</h6>
+                    <p class="text-sm">
+                      Hydrating Facials: Deeply nourishing facials designed to
+                      hydrate and refresh the skin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="relative inline-block">
+                  <!-- Image Section -->
+                  <img
+                    src="assets/lady-makeup.png"
+                    alt="makeup"
+                    class="h-auto"
+                  />
+
+                  <!-- Content Overlay at Bottom -->
+                  <div
+                    class="absolute bottom-0 left-0 right-0 bg-white/80 rounded-tr-[100px] p-4 text-left"
+                  >
+                    <h6 class="text-lg font-semibold">Face treatments</h6>
+                    <p class="text-sm">
+                      Hydrating Facials: Deeply nourishing facials designed to
+                      hydrate and refresh the skin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Repeat for other slides... -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="md:py-[80px] py-[40px]">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="section-heading text-center">
+            <h2 class="font-semibold md:text-[42px] text-[30px] capitalize">
+              See the transformation
+            </h2>
+          </div>
+          <div
+            class="flex flex-col lg:flex-row items-center justify-center mt-8 gap-6 lg:gap-10"
+          >
+            <!-- First transformation block -->
+            <div class="flex flex-col items-center">
+              <div
+                class="mb-6 md:mb-10 bg-gray-200 rounded-tl-xl rounded-tr-3xl rounded-br-3xl p-4 md:p-3"
+              >
+                <p class="text-base md:text-lg font-medium">
+                  <i class="fa-regular fa-face-smile mr-2"></i> Face treatments
+                </p>
+              </div>
+              <div class="flex items-center gap-6 lg:gap-10">
+                <div class="flex flex-col items-center">
+                  <img
+                    src="assets/before-image.png"
+                    alt="Before treatment"
+                    class="w-36 md:w-48 lg:w-56"
+                  />
+                  <span class="mt-2 text-sm font-medium text-gray-600"
+                    >Before</span
+                  >
+                </div>
+                <div class="flex flex-col items-center">
+                  <img
+                    src="assets/after-image.png"
+                    alt="After treatment"
+                    class="w-36 md:w-48 lg:w-56"
+                  />
+                  <span class="mt-2 text-sm font-medium text-gray-600"
+                    >After</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Second transformation block -->
+            <div class="flex flex-col items-center">
+              <div
+                class="mb-6 md:mb-10 bg-gray-200 rounded-tl-xl rounded-tr-3xl rounded-br-3xl p-4 md:p-3"
+              >
+                <p class="text-base md:text-lg font-medium">
+                  <i class="fa-regular fa-face-smile mr-2"></i> Face treatments
+                </p>
+              </div>
+              <div class="flex items-center gap-6 lg:gap-10">
+                <div class="flex flex-col items-center">
+                  <img
+                    src="assets/before-image.png"
+                    alt="Before treatment"
+                    class="w-36 md:w-48 lg:w-56"
+                  />
+                  <span class="mt-2 text-sm font-medium text-gray-600"
+                    >Before</span
+                  >
+                </div>
+                <div class="flex flex-col items-center">
+                  <img
+                    src="assets/after-image.png"
+                    alt="After treatment"
+                    class="w-36 md:w-48 lg:w-56"
+                  />
+                  <span class="mt-2 text-sm font-medium text-gray-600"
+                    >After</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="md:py-[80px] py-[40px]">
+        <div class="container mx-auto md:px-6 px-4">
+          <div
+            class="md:p-16 p-10 bg-[#fee0d9] rounded-xl md:rounded-3xl lg:flex lg:items-center lg:justify-between"
+          >
+            <div>
+              <h2 class="text-2xl font-semibold tracking-tight xl:text-3xl">
+                Ready for radiant skin?
+              </h2>
+              <p class="mt-2">
+                Book your personalized skincare session today and discover your
+                natural glow.
+              </p>
+            </div>
+
+            <div class="mt-8 lg:mt-0">
+              <div class="flex items-center gap-2">
+                <a
+                  href="https://glosifi.com/"
+                  target="_blank"
+                  class="flex items-center gap-2 px-6 py-2 tracking-wide capitalize btn-primary rounded-tr-3xl"
+                  aria-label="Schedule appointment"
+                >
+                  <i class="fa-solid fa-phone"></i> Schedule appointment
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="md:py-[80px] py-[40px]">
+        <div class="container mx-auto px-6">
+          <div
+            class="grid md:grid-cols-3 grid-cols-1 gap-6 w-full md:w-2/3 mx-auto"
+          >
+            <!-- Stat Item 1 -->
+            <div class="flex-1">
+              <div
+                class="text-center border border-gray-300 py-10 px-5 rounded h-full flex flex-col justify-between"
+              >
+                <h3 class="font-semibold text-xl md:text-3xl mb-4">5,000+</h3>
+                <p class="mt-auto">
+                  Satisfied clients who trust us with their skincare.
+                </p>
+              </div>
+            </div>
+
+            <!-- Stat Item 2 -->
+            <div class="flex-1">
+              <div
+                class="text-center border border-gray-300 py-10 px-5 rounded h-full flex flex-col justify-between"
+              >
+                <h3 class="font-semibold text-xl md:text-3xl mb-4">10+</h3>
+                <p class="mt-auto">
+                  Years providing expert skincare solutions.
+                </p>
+              </div>
+            </div>
+
+            <!-- Stat Item 3 -->
+            <div class="flex-1">
+              <div
+                class="text-center border border-gray-300 py-10 px-5 rounded h-full flex flex-col justify-between"
+              >
+                <h3 class="font-semibold text-xl md:text-3xl mb-4">20,000+</h3>
+                <p class="mt-auto">
+                  Transformative treatments completed with care.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="md:py-[80px] py-[40px]">
+        <div class="flex flex-col md:flex-row">
+          <!-- Testimonial Slider -->
+          <div class="md:w-2/3 w-full">
+            <div class="section-heading text-center mb-4 md:mb-8">
+              <h3 class="font-semibold text-[30px] md:text-[36px] capitalize">
+                Our clients love their results
+              </h3>
+            </div>
+
+            <div class="bg-white">
+              <div class="swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                    <div class="container mx-auto px-4">
+                      <div
+                        class="flex flex-col lg:flex-row items-center justify-between bg-[#ffefd7] p-10"
+                      >
+                        <div class="lg:w-2/3 text-center lg:text-left lg:mr-8">
+                          <div
+                            class="flex justify-center lg:justify-start items-center mb-4"
+                          >
+                            <div
+                              class="flex justify-center lg:justify-start items-center mb-4"
+                            >
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                            </div>
+                          </div>
+                          <blockquote
+                            class="text-lg text-gray-800 leading-relaxed"
+                          >
+                            “I’m so grateful I found Glisten! My skin has never
+                            looked this good. The anti-aging treatments are
+                            gentle but powerful. I finally feel comfortable in
+                            my skin again!”
+                          </blockquote>
+                          <p class="mt-4 text-lg font-semibold text-gray-900">
+                            Emma T.
+                          </p>
+                        </div>
+                        <div class="lg:w-1/3 mt-8 lg:mt-0">
+                          <img
+                            src="assets/testimonial-img.png"
+                            alt="Emma T. photo"
+                            class="w-full h-auto object-cover mx-auto lg:mx-0 rounded-lg"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="container mx-auto px-4">
+                      <div
+                        class="flex flex-col lg:flex-row items-center justify-between bg-[#ffefd7] p-10"
+                      >
+                        <div class="lg:w-2/3 text-center lg:text-left lg:mr-8">
+                          <div
+                            class="flex justify-center lg:justify-start items-center mb-4"
+                          >
+                            <div
+                              class="flex justify-center lg:justify-start items-center mb-4"
+                            >
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                            </div>
+                          </div>
+                          <blockquote
+                            class="text-lg text-gray-800 leading-relaxed"
+                          >
+                            “I’m so grateful I found Glisten! My skin has never
+                            looked this good. The anti-aging treatments are
+                            gentle but powerful. I finally feel comfortable in
+                            my skin again!”
+                          </blockquote>
+                          <p class="mt-4 text-lg font-semibold text-gray-900">
+                            Emma T.
+                          </p>
+                        </div>
+                        <div class="lg:w-1/3 mt-8 lg:mt-0">
+                          <img
+                            src="assets/testimonial-img.png"
+                            alt="Emma T. photo"
+                            class="w-full h-auto object-cover mx-auto lg:mx-0 rounded-lg"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 2 -->
+                  <!-- <div class="swiper-slide">
+                    <div class="container mx-auto px-4">
+                      <div
+                        class="flex flex-col lg:flex-row items-center justify-between bg-[#ffefd7] p-10"
+                      >
+                        <div class="lg:w-2/3 text-center lg:text-left lg:mr-8">
+                          <div
+                            class="flex justify-center lg:justify-start items-center mb-4"
+                          >
+                            <div
+                              class="flex justify-center lg:justify-start items-center mb-4"
+                            >
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                              <i
+                                class="fa-solid fa-star text-yellow-400 text-2xl mr-1"
+                              ></i>
+                            </div>
+                          </div>
+                          <blockquote
+                            class="text-lg text-gray-800 leading-relaxed"
+                          >
+                            “I’m so grateful I found Glisten! My skin has never
+                            looked this good. The anti-aging treatments are
+                            gentle but powerful. I finally feel comfortable in
+                            my skin again!”
+                          </blockquote>
+                          <p class="mt-4 text-lg font-semibold text-gray-900">
+                            Emma T.
+                          </p>
+                        </div>
+                        <div class="lg:w-1/3 mt-8 lg:mt-0">
+                          <img
+                            src="assets/testimonial-img.png"
+                            alt="Emma T. photo"
+                            class="w-full h-auto object-cover mx-auto lg:mx-0 rounded-lg"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next !text-[#512729]"></div>
+                <div class="swiper-button-prev !text-[#512729]"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications Section -->
+          <div
+            class="md:w-1/3 w-full bg-[#512729] rounded-br-[100px] text-white"
+          >
+            <div class="flex items-center pt-[50px] px-10 space-x-4">
+              <img
+                src="assets/badge.png"
+                alt="Badge Icon"
+                class="w-10 h-auto"
+              />
+              <h2 class="text-[#FF835A] text-[36px] font-bold">
+                Certifications
+              </h2>
+            </div>
+
+            <div class="px-10 mt-6 space-y-4">
+              <img
+                src="assets/certi.png"
+                alt="Certification 1"
+                class="w-56 h-auto"
+              />
+              <img
+                src="assets/certi.png"
+                alt="Certification 2"
+                class="w-56 h-auto"
+              />
+            </div>
+
+            <div class="px-10 mt-6 pb-8">
+              <button
+                class="text-[#FF835A] px-4 border-b-2 border-[#FF835A] hover:border-transparent transition duration-300"
+              >
+                View all Certifications
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="md:py-[80px] py-[40px] bg-white scroll-mt-[50px] md:scroll-mt-[80px]"
+        id="contact"
+      >
+        <div
+          class="container mx-auto px-6 flex flex-col lg:flex-row justify-between items-start"
+        >
+          <!-- Left: Sponsors Section -->
+          <div class="w-full lg:w-3/5 mb-8 lg:mb-0">
+            <h3
+              class="font-semibold mb-10 md:text-[36px] text-[30px] capitalize"
+            >
+              Our sponsors
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 mb-8 gap-10">
+              <!-- Sponsor logos (example placeholders) -->
+              <img class="h-8" src="assets/graph.png" alt="Grapho" />
+              <img class="h-8" src="assets/logique.png" alt="Logique" />
+              <img class="h-8" src="assets/iconic.png" alt="Iconic" />
+              <img class="h-8" src="assets/optimal.png" alt="Optimal" />
+              <img class="h-8" src="assets/visaul.png" alt="Visualfy" />
+              <img class="h-8" src="assets/wayline.png" alt="WAYLINE" />
+            </div>
+
+            <!-- Image Section -->
+            <div class="overflow-hidden">
+              <img
+                class="w-auto object-contain h-80"
+                src="assets/spa.png"
+                alt="Spa treatment image"
+              />
+            </div>
+          </div>
+
+          <!-- Right: Appointment Form Section -->
+          <div class="w-full lg:w-2/5 bg-pink-100 p-4 md:p-8 rounded-br-3xl">
+            <h4 class="font-semibold mb-6 md:text-[24px] text-[18px]">
+              Book an appointment
+            </h4>
+            <form action="#">
+              <div class="grid grid-cols-1 gap-4">
+                <!-- Full Name and Phone -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="relative">
+                    <input
+                      type="text"
+                      placeholder="Full name"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400"
+                    />
+                    <i
+                      class="fa-solid fa-user absolute top-3 right-3 text-gray-400"
+                    ></i>
+                  </div>
+                  <div class="relative">
+                    <input
+                      type="text"
+                      placeholder="Phone number"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400"
+                    />
+                    <i
+                      class="fa-solid fa-phone absolute top-3 right-3 text-gray-400"
+                    ></i>
+                  </div>
+                </div>
+
+                <!-- Email and Date -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="relative">
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400"
+                    />
+                    <i
+                      class="fa-solid fa-envelope absolute top-3 right-3 text-gray-400"
+                    ></i>
+                  </div>
+                  <div class="relative">
+                    <input
+                      type="text"
+                      placeholder="MM/DD/YYYY"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400"
+                    />
+                    <i
+                      class="fa-solid fa-calendar absolute top-3 right-3 text-gray-400"
+                    ></i>
+                  </div>
+                </div>
+
+                <!-- Service Dropdown and Time -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="relative">
+                    <select
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400"
+                    >
+                      <option>Select service</option>
+                      <option>Massage</option>
+                      <option>Facial</option>
+                      <option>Manicure</option>
+                    </select>
+                  </div>
+                  <div class="relative">
+                    <input
+                      type="text"
+                      placeholder="06:00 AM"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400"
+                    />
+                    <i
+                      class="fa-solid fa-clock absolute top-3 right-3 text-gray-400"
+                    ></i>
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <div class="relative">
+                  <textarea
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-400"
+                    rows="4"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button
+                  type="submit"
+                  class="btn btn-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-orange-600 transition-colors flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-paper-plane mr-2"></i> Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="md:py-[80px] py-[40px] bg-pink-50">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="font-semibold mb-14 md:text-[42px] text-[30px] capitalize">
+            Skincare tips & insights
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Article 3 -->
+            <div class="overflow-hidden">
+              <img
+                class="w-full h-auto object-cover"
+                src="assets/blog-1.png"
+                alt="Common skincare myths - debunked!"
+              />
+              <div class="p-6">
+                <h6 class="font-semibold mb-2 text-left">
+                  Common skincare myths - debunked!
+                </h6>
+                <p class="mb-4 flex items-center text-gray-400">
+                  <i class="fa-solid fa-calendar mr-2"></i> November 3, 2024
+                </p>
+              </div>
+            </div>
+            <!-- Article 3 -->
+            <div class="overflow-hidden">
+              <img
+                class="w-full h-auto object-cover"
+                src="assets/blog-1.png"
+                alt="Common skincare myths - debunked!"
+              />
+              <div class="p-6">
+                <h6 class="font-medium mb-2 text-left">
+                  Common skincare myths - debunked!
+                </h6>
+                <p class="mb-4 flex items-center text-gray-400">
+                  <i class="fa-solid fa-calendar mr-2"></i> November 3, 2024
+                </p>
+              </div>
+            </div>
+            <!-- Article 3 -->
+            <div class="overflow-hidden">
+              <img
+                class="w-full h-auto object-cover"
+                src="assets/blog-1.png"
+                alt="Common skincare myths - debunked!"
+              />
+              <div class="p-6">
+                <h6 class="font-medium mb-2 text-left">
+                  Common skincare myths - debunked!
+                </h6>
+                <p class="mb-4 flex items-center text-gray-400">
+                  <i class="fa-solid fa-calendar mr-2"></i> November 3, 2024
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="md:pt-[80px] pt-[40px]">
+        <div class="swiper-container relative gallery-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="relative inline-block">
+                <img src="assets/gallery.png" alt="make up" class="h-auto" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative inline-block">
+                <img src="assets/gallery.png" alt="make up" class="h-auto" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative inline-block">
+                <img src="assets/gallery.png" alt="make up" class="h-auto" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative inline-block">
+                <img src="assets/gallery.png" alt="make up" class="h-auto" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative inline-block">
+                <img src="assets/gallery.png" alt="make up" class="h-auto" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative inline-block">
+                <img src="assets/gallery.png" alt="make up" class="h-auto" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative inline-block">
+                <img src="assets/gallery.png" alt="make up" class="h-auto" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="md:pt-[60px] pt-[40px] pb-8 bg-[#512729] text-white">
+      <div class="container mx-auto px-6">
+        <!-- Logo and description -->
+        <div class="flex items-center md:flex-row flex-col justify-between">
+          <div
+            class="flex md:flex-row flex-col justify-between items-center gap-10 w-full md:w-2/3"
+          >
+            <img
+              src="assets/santaj-logo.png"
+              alt="G skincare logo"
+              class="w-28"
+            />
+            <p class="mb-4">
+              At Glisten, we're dedicated to helping you achieve radiant,
+              healthy skin through personalized skincare treatments and expert
+              guidance.
+            </p>
+          </div>
+
+          <a
+            href="https://glosifi.com/"
+            target="_blank"
+            class="btn-primary py-2 px-4"
+          >
+            Schedule appointment
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 mt-6"
+      >
+        <!-- Pages -->
+        <div>
+          <h5 class="font-medium mb-4 text-white">Pages</h5>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-orange text-white">Home</a></li>
+            <li><a href="#" class="hover:text-orange text-white">About</a></li>
+            <li>
+              <a href="#" class="hover:text-orange text-white">Contact</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange text-white">Pricing</a>
+            </li>
+            <li><a href="#" class="hover:text-orange text-white">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h5 class="font-medium mb-4 text-white">Services</h5>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="hover:text-orange text-white"
+                >Custom Facials</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange text-white"
+                >Anti-aging Treatments</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange text-white"
+                >Acne Solutions</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange text-white"
+                >Hydration Therapy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange text-white"
+                >Skin Resurfacing</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact and Social Links -->
+        <div>
+          <h5 class="font-medium mb-4 text-white">Contact Us</h5>
+          <ul class="space-y-2">
+            <li class="text-white">
+              <i class="fa fa-phone mr-2"></i>(123) 456-7890
+            </li>
+            <li class="text-white">
+              <i class="fa fa-envelope mr-2"></i>info@example.com
+            </li>
+            <li class="text-white">
+              <i class="fa fa-map-marker mr-2"></i>123 Skincare Street, Wellness
+              City
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-8 md:mt-0">
+          <h5 class="font-semibold mb-6 text-white text-lg">Follow Us</h5>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              aria-label="Visit our Instagram profile"
+              class="text-white hover:text-orange-400 transition-colors duration-300 transform hover:scale-110"
+            >
+              <i class="fab fa-instagram text-2xl"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="Visit our Facebook page"
+              class="text-white hover:text-orange-400 transition-colors duration-300 transform hover:scale-110"
+            >
+              <i class="fab fa-facebook-f text-2xl"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="Follow us on Twitter"
+              class="text-white hover:text-orange-400 transition-colors duration-300 transform hover:scale-110"
+            >
+              <i class="fab fa-twitter text-2xl"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="Check our Pinterest board"
+              class="text-white hover:text-orange-400 transition-colors duration-300 transform hover:scale-110"
+            >
+              <i class="fab fa-pinterest-p text-2xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="container mx-auto px-6 mt-12 text-center border-t border-gray-600 pt-6"
+      >
+        <div class="text-center">
+          <p>&copy; 2024 Shantaj Beauty and Wellness. All rights reserved.</p>
+        </div>
+        <p class="text-white">
+          Designed by
+          <a href="https://glossybyte.com/" class="hover:underline"
+            >GlossyByte</a
+          >, Powered by
+          <a href="https://glosifi.com/" class="hover:underline">Glosifi.</a>
+        </p>
+        <div class="mt-4">
+          <a href="#" class="mr-4 hover:text-orange text-white"
+            >Terms & Conditions</a
+          >
+          <a href="#" class="hover:text-orange text-white">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
